@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./server/server.js & NODE_ENV=development webpack serve --open --hot",
     "vercel-build":"echo hello",
-    "build": "webpack",
+    "webpack-build": "webpack",
     "serve": "node ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
