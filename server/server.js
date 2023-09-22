@@ -24,8 +24,10 @@ app.post('/api', async (req, res) => {
 });
 
 app.patch('/api', (req, res) => {
-  res.send('patch');
+    res.status(200).json('patch');
 });
+
+app.use((req, res) => res.sendStatus(404)); 
 
 const PORT = parseInt(process.env.PORT) || 3000;
 app.listen(PORT, () => {
