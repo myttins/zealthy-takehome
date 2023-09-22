@@ -1,16 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Admin = () => {
+  const [tickets, setTickets] = useState([]);
   useEffect(() => {
-    fetchData();
+    const fetchData = async () => {
+      const response = await fetch('/api');
+      const data = await response.json();
+      setTickets(data);
+      return data;
+    };
+
+    try {
+      fetchData();
+    } catch (e) {
+      console.log(e);
+    }
   }, []);
 
-  const fetchData = async () => {
-    const response = await fetch('/api')
-    const data = await response.json();
-    console.log(data);
-  }
-  return <div>Admin</div>;
+  return (
+    <div>
+      {tickets.map((item, index) => {
+        return <div key={index}>{item.name}</div>;
+      })}
+    </div>
+  );
 };
 
 export default Admin;

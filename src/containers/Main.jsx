@@ -8,21 +8,25 @@ const Main = () => {
     message: null,
   });
 
-  const handleSubmit = async () => {
-    // validate data
-    await fetch(`/api/submit`, {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    e.target.reset();
+    //TODO: validate data
+
+    await fetch(`/api`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(form),
     });
+
   };
 
   return (
     <div>
       <h1>New Ticket</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input
           className="block"
           type="text"

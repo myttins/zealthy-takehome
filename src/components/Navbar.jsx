@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <ul>
-        <Link to={'/'}>Home</Link>
-        <Link to={'/admin'}>Admin</Link>
-    </ul>
+    <div>
+      <Link to={'/'} className="m-2 p-4">
+        Home
+      </Link>
+      <Link to={'/admin'} className="m-2 p-2">
+        Admin
+      </Link>
+    </div>
   );
 };
 
