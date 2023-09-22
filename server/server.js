@@ -24,10 +24,14 @@ app.post('/api', async (req, res) => {
 });
 
 app.patch('/api', (req, res) => {
-    res.status(200).json('patch');
+  res.status(200).json('patch');
 });
 
-app.use((req, res) => res.sendStatus(404)); 
+app.get('/', (req, res) => {
+  res.send('Express JS on Vercel');
+});
+
+app.use((req, res) => res.sendStatus(404));
 
 const PORT = parseInt(process.env.PORT) || 3000;
 app.listen(PORT, () => {
