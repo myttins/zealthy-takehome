@@ -19,13 +19,12 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl m-auto bg-slate-100">
-      <div className='flex w-full'>
-        <a className="w-1/6">Time</a>
-        <a className="w-1/6">Subject</a>
+    <div className="max-w-5xl m-auto mt-10 ">
+      <div className='flex w-full border-b-2'>
+        <a className="w-2/6">Subject</a>
         <a className="w-1/6">Name</a>
         <a className="w-1/6">Status</a>
-        <a className="w-2/6">Message</a>
+        <a className="w-2/6">Updated</a>
       </div>
       <div>
         {tickets.map((data, index) => {

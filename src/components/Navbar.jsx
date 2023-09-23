@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const linkStyle = 'pt-4 pr-4 inline-block hover:underline underline-offset-4';
   return (
-    <div>
-      <Link to={'/'} className="m-2 p-4 inline-block">
+    <div className="m-auto max-w-5xl">
+      <Link to={'/'} className={linkStyle}>
         New Ticket
       </Link>
-      <Link to={'/admin'} className="m-2 p-2 inline-block">
+      <Link to={'/admin'} className={linkStyle}>
         Admin
       </Link>
     </div>

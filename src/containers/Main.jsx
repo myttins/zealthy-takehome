@@ -22,39 +22,44 @@ const Main = () => {
     });
   };
 
+  const inputStyle = 'block border my-2 w-full p-2';
+
   return (
-
-      <div className="max-w-5xl m-auto bg-slate-100">
-        <h1>New Ticket</h1>
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <input
-            className="block"
-            type="text"
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="Name"
-          />
-          <input
-            className="block"
-            type="text"
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            placeholder="Email"
-          />
-          <input
-            className="block"
-            type="text"
-            onChange={(e) => setForm({ ...form, subject: e.target.value })}
-            placeholder="Subject"
-          />
-          <input
-            className="block"
-            type="text"
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            placeholder="Message"
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-
+    <div className="max-w-5xl m-auto">
+      <h1 className="text-2xl mt-10">New Ticket</h1>
+      <form className="my-4" onSubmit={(e) => handleSubmit(e)}>
+        <input
+          className={inputStyle}
+          type="text"
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+          placeholder="Name"
+        />
+        <input
+          className={inputStyle}
+          type="text"
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
+          placeholder="Email"
+        />
+        <input
+          className={inputStyle}
+          type="text"
+          onChange={(e) => setForm({ ...form, subject: e.target.value })}
+          placeholder="Subject"
+        />
+        <textarea
+          className={inputStyle}
+          type="text"
+          onChange={(e) => setForm({ ...form, message: e.target.value })}
+          placeholder="Message"
+        />
+        <button
+          className="border-2 border-slate-700 rounded-full bg-slate-700 text-white px-4 py-1 hover:text-black hover:bg-white"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 
