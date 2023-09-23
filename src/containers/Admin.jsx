@@ -19,7 +19,7 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="max-w-5xl m-auto mt-10 ">
+    <div className="px-5 max-w-5xl m-auto mt-10 ">
       <div className='flex w-full border-b-2'>
         <a className="w-2/6">Subject</a>
         <a className="w-1/6">Name</a>

@@ -25,7 +25,7 @@ const Main = () => {
   const inputStyle = 'block border my-2 w-full p-2';
 
   return (
-    <div className="max-w-5xl m-auto">
+    <div className="max-w-5xl m-auto px-6">
       <h1 className="text-2xl mt-10">New Ticket</h1>
       <form className="my-4" onSubmit={(e) => handleSubmit(e)}>
         <input

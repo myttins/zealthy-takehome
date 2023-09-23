@@ -7,10 +7,10 @@ import { Outlet } from 'react-router';
 
 const App = () => {
   return (
-    <>
+    <div className='min-w-[448px]'>
       <Navbar />
       <Outlet />
-    </>
+    </div>
   );
 };
 

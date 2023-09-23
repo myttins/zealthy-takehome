@@ -12,19 +12,6 @@ const Ticket = () => {
         `https://zealthy-backend.vercel.app/api/${id}`,
       );
 
-      // const response = [
-      //   {
-      //     id: 2,
-      //     name: 'steve',
-      //     email: 'steve@steve.com',
-      //     status: 'New',
-      //     message: 'message',
-      //     response: null,
-      //     timestamp: '9/22/2023, 3:01:58 PM',
-      //     subject: 'subject',
-      //   },
-      // ];
-
       const data = await response.json();
       setData(data[0]);
     };
@@ -37,7 +24,6 @@ const Ticket = () => {
   }, []);
 
   const handleClick = async () => {
-    console.log(data);
     await fetch(`https://zealthy-backend.vercel.app/api/${id}`, {
       method: 'PATCH',
       headers: {
@@ -49,26 +35,28 @@ const Ticket = () => {
     navigate('/admin');
   };
 
+  const spanStyle = "w-1/6 text-slate-400 min-w-[96px]"
+
   return (
-    <div className="max-w-5xl m-auto mt-10">
-      <div className="flex mt-2">
-        <span className="w-1/6 text-slate-400">Name: </span>
+    <div className="max-w-5xl m-auto mt-10 px-6">
+      <div className="flex mt-4">
+        <span className={spanStyle}>Name: </span>
         <span>{data.name}</span>
       </div>
-      <div className="flex mt-2">
-        <span className="w-1/6 text-slate-400">Email: </span>
+      <div className="flex mt-4">
+        <span className={spanStyle}>Email: </span>
         <span>{data.email}</span>
       </div>
-      <div className="flex mt-2">
-        <span className="w-1/6 text-slate-400">Subject: </span>
+      <div className="flex mt-4">
+        <span className={spanStyle}>Subject: </span>
         <span>{data.subject}</span>
       </div>
-      <div className="flex mt-2">
-        <span className="w-1/6 text-slate-400">Mesage: </span>
+      <div className="flex mt-4">
+        <span className={spanStyle}>Mesage: </span>
         <span>{data.message}</span>
       </div>
-      <div className="flex mt-2 ">
-        <span className="w-1/6 text-slate-400">Status: </span>
+      <div className="flex mt-4 ">
+        <span className={spanStyle}>Status: </span>
         <label className="mr-4">
           <input
             className="mr-1"
@@ -106,8 +94,8 @@ const Ticket = () => {
           Resolved
         </label>
       </div>
-      <div className="flex mt-2">
-        <span className="w-1/6 text-slate-400">Response: </span>
+      <div className="flex mt-4">
+        <span className={spanStyle}>Response: </span>
         <textarea
           className="border p-2"
           placeholder="Response Message"
@@ -119,7 +107,7 @@ const Ticket = () => {
       </div>
 
       <button
-        className="border-2 border-slate-700 rounded-full bg-slate-700 text-white px-4 py-1 hover:text-black hover:bg-white"
+        className="border-2 border-slate-700 rounded-full bg-slate-700 text-white mt-4 px-4 py-1 hover:text-black hover:bg-white"
         onClick={handleClick}
       >
         Submit
