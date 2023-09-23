@@ -24,16 +24,10 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
-    headers: { 'Access-Control-Allow-Origin': '*' },
-    proxy: {
-      '/api/*': {
-        target: 'http://localhost:3000',
-        secure: false,
-      },
-      '/assets/*': {
-        target: 'http://localhost:3000',
-        secure: false,
-      },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': '*',
+      'Access-Control-Allow-Headers': '*',
     },
   },
   module: {
