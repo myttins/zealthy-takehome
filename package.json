@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon ./api/index.js & NODE_ENV=development webpack serve --open --hot",
     "webpack-build": "webpack",
+    "vercel-build": "echo hello",
     "start": "node ./api/index.js"
   },
   "keywords": [],
