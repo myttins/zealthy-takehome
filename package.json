@@ -7,9 +7,9 @@
     "node": "18.x"
   },
   "scripts": {
-    "dev": "NODE_ENV=development nodemon ./server/server.js & NODE_ENV=development webpack serve --open --hot",
+    "dev": "NODE_ENV=development nodemon ./api/index.js & NODE_ENV=development webpack serve --open --hot",
     "webpack-build": "webpack",
-    "start": "node ./server/server.js"
+    "start": "node ./api/index.js"
   },
   "keywords": [],
   "author": "",
