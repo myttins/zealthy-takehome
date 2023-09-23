@@ -23,7 +23,7 @@ const Main = () => {
   };
 
   return (
-    <div>
+
       <div className="max-w-5xl m-auto bg-slate-100">
         <h1>New Ticket</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
@@ -54,7 +54,7 @@ const Main = () => {
           <button type="submit">Submit</button>
         </form>
       </div>
-    </div>
+
   );
 };
 

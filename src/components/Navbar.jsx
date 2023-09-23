@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
       <Link to={'/'} className="m-2 p-4 inline-block">
-        Home
+        New Ticket
       </Link>
       <Link to={'/admin'} className="m-2 p-2 inline-block">
         Admin
